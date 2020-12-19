@@ -1,0 +1,40 @@
+package testCases;
+
+import java.io.IOException;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import junit.framework.Assert;
+import pageObjects.LoginPage;
+import utility.Base;
+
+public class LoginTest extends Base {
+	
+	@BeforeTest
+	public void init() throws IOException {
+		
+		driver=driverInitialize();
+		driver.get("http://demo.guru99.com/V4/");
+		driver.manage().window().maximize();
+		
+	}
+	
+	@Test
+	public void testLogin() throws IOException {
+		
+		LoginPage lp=new LoginPage(driver);
+		lp.getUsername().sendKeys("mngr293481");
+		lp.getPassowrd().sendKeys("EsApAsy");
+		lp.getLoginButton().click();
+		
+		Assert.assertEquals(driver.getTitle(), "Hello");
+		
+	}
+	
+	@AfterTest
+	public void teardown() {
+		driver.close();
+	}
+}

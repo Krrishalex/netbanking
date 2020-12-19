@@ -1,0 +1,17 @@
+
+interface a{
+	public void display(int a);
+}
+
+
+ class Inter implements a{
+
+	public void display(int a) {
+		System.out.println(a);
+		
+	}
+	
+	
+	
+
+}

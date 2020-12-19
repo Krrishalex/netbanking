@@ -1,0 +1,11 @@
+package com.inetbanking.pageObjects;
+
+import org.openqa.selenium.WebDriver;
+
+public class Testfield {
+
+	public WebDriver driver;
+	
+
+	
+}

@@ -1,0 +1,41 @@
+package com.inetbanking.testCases;
+
+interface J{
+	void ferro();
+}
+
+interface K{
+	void herro();
+}
+
+interface L extends J,K{
+	void kerro();
+}
+
+class Huge implements L{
+
+	public void ferro() {
+		System.out.println("Frror");
+		
+	}
+
+	public void herro() {
+		System.out.println("Hrror");
+		
+	}
+
+	public void kerro() {
+		System.out.println("Krror");
+		
+	}
+	
+}
+
+public class Hello {
+public static void main(String[] args) {
+	L l=new Huge();
+	l.ferro();
+	l.herro();
+	l.kerro();
+}
+}

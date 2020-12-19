@@ -1,0 +1,72 @@
+package testCases;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import utility.Base;
+
+public class Listerner extends Base implements ITestListener {
+
+	public void onFinish(ITestContext arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onStart(ITestContext arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onTestFailure(ITestResult result) {
+		WebDriver driver = null;
+		String testcaseName=result.getMethod().getMethodName();
+		try {
+			driver=(WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			getScreenshot(testcaseName, driver);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void onTestSkipped(ITestResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onTestStart(ITestResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onTestSuccess(ITestResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.inetbanking.testCases;
+
+abstract class A{
+	abstract void display();
+	void show() {
+		System.out.println("King A");
+	}
+}
+
+class B extends A{
+
+	@Override
+	void display() {
+		System.out.println("Hello");
+		
+	}
+	
+	
+}
+
+public class Abstract {
+	
+	public static void main(String[] args) {
+		A a=new B();
+		a.display();
+		a.show();
+		
+	}
+
+}

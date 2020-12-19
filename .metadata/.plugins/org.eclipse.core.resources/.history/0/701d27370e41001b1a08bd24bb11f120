@@ -1,0 +1,22 @@
+package com.inetbanking.testCases;
+
+interface a{
+	public void display(int a);
+}
+
+
+ class Runn implements a{
+
+	public void display(int a) {
+		System.out.println(a);
+		
+	}
+	
+	
+	public class Runn() {
+		a a=new Inter();
+		a.display(5);
+	}
+	
+
+}

@@ -1,0 +1,27 @@
+package com.inetbanking.testCases;
+
+ interface Abs {
+void a();
+}
+
+ interface Dsd{
+void dsd();
+}
+ 
+ interface fsc extends Abs,Dsd{
+	 
+ }
+
+ public class B implements fsc{
+
+	public void a() {
+	System.out.println(554);
+		
+	}
+
+	public void dsd() {
+		System.out.println();
+		
+	}
+	 
+ }

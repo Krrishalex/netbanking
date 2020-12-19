@@ -1,0 +1,20 @@
+package com.inetbanking.pageObjects;
+
+import java.util.PriorityQueue;
+
+public class qtest {
+
+	public static void main(String[] args) {
+		
+		PriorityQueue<String> pa=new PriorityQueue<String>();
+		pa.add("Hello");
+		pa.add("Hello");
+		pa.add("Hello");
+		
+		System.out.println(pa);
+		System.out.println(pa.isEmpty());
+		System.out.println(pa.peek());
+		System.out.println(pa.poll());
+		
+	}
+}

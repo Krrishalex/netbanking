@@ -1,0 +1,17 @@
+package com.inetbanking.testCases;
+interface a{
+	public void display(int a);
+}
+
+
+public class Inter implements a{
+
+	public void display(int a) {
+		System.out.println(a);
+		
+	}
+	
+	
+	
+
+}

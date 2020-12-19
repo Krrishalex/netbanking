@@ -1,0 +1,15 @@
+package com.inetbanking.pageObjects;
+
+import java.lang.reflect.Field;
+
+import org.openqa.selenium.WebDriver;
+
+public class GetField {
+	
+	public static void main(String[] args) throws NoSuchFieldException, SecurityException {
+	Field driver=args.getClass().getDeclaredField("driver");
+	
+	System.out.println(driver);
+	}
+
+}

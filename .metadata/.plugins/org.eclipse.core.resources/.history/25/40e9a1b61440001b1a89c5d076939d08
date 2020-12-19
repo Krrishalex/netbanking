@@ -1,0 +1,43 @@
+package com.inetbanking.testCases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+
+import com.inetbanking.utilities.ReadConfig;
+
+public class BaseClass {
+	
+	ReadConfig readConfig=new ReadConfig();
+	
+	public String basicURL=readConfig.getApplicationURL();
+	
+	public String username=readConfig.getUsername();
+	public String password=readConfig.getPassword();
+	public static WebDriver driver;
+	
+	@Parameters("browser")
+	@BeforeClass
+	public void setup(String browser) {
+		
+		
+		
+		if(browser.equals("chrome")) {
+			System.setProperty("webdriver.chrome.driver", readConfig.getChromePath());
+			
+			driver=new ChromeDriver();
+		}
+		
+		
+		
+	}
+	
+	@AfterClass
+	public void tearDown() {
+		driver.quit();
+	}
+	
+
+}

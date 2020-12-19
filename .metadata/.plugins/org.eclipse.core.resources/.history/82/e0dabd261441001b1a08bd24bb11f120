@@ -1,0 +1,27 @@
+package com.inetbanking.testCases;
+
+ interface High {
+void a();
+}
+
+ interface Dsd{
+void dsd();
+}
+ 
+ interface fsc extends B,Dsd{
+	 
+ }
+
+ public class High implements fsc{
+
+	public void a() {
+	System.out.println(554);
+		
+	}
+
+	public void dsd() {
+		System.out.println();
+		
+	}
+	 
+ }
